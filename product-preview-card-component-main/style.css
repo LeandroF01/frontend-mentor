@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+:root {
+  --bg-cream: hsl(30, 38%, 92%);
+  --bg-dark_cyan: hsl(158, 36%, 37%);
+
+  --bg-very-dark_blue: hsl(212, 21%, 14%);
+  --bg-dark-grayish_blue: hsl(228, 12%, 48%);
+  --bg-white: hsl(0, 0%, 100%);
+}
+
+h2,
+h4,
+h5,
+p {
+  margin: 0%;
+}
+
+body {
+  font-size: 14px;
+  padding: 0%;
+  margin: 0%;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-cream);
+  color: var(--bg-dark-grayish_blue);
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.card-container {
+  display: flex;
+  width: 40em;
+  height: 31em;
+  margin: 1em;
+  background: var(--bg-white);
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.img-item {
+  width: 20em;
+  height: 100%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.card-sub_title {
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.card-name_title {
+  color: var(--bg-very-dark_blue);
+  font-family: Fraunces;
+  font-weight: 700;
+  font-size: 2.2em;
+  margin: 0.7em 0;
+}
+
+.card-parraf {
+  font-size: 0.9em;
+  line-height: 170%;
+}
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+}
+.card-price_container {
+  display: flex;
+  margin: 1.5em 0;
+  gap: 1em;
+}
+
+.new-price {
+  color: var(--bg-dark_cyan);
+  font-size: 2em;
+  font-family: Fraunces;
+}
+
+.dis-price {
+  text-decoration: line-through;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--bg-white);
+  background: var(--bg-dark_cyan);
+  width: 100%;
+  padding: 0.9em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    max-width: 25em;
+    height: 43em;
+  }
+  .img-item {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+  }
+  .card-name_title {
+    margin: 0.2em 0;
+  }
+  .card-price_container {
+    margin: 1em 0;
+  }
+}
