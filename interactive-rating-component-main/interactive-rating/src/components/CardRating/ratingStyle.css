@@ -1,0 +1,87 @@
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 23em;
+  height: 22em;
+  background: var(--bg-dark-blue);
+  border-radius: 1.5em;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.card-rating {
+  margin: 1.7em;
+}
+
+.img-star {
+  width: 1.1em;
+  height: 1.1em;
+  aspect-ratio: 1;
+  background: var(--bg-dark-blue);
+  filter: brightness(130%);
+  padding: 0.7em;
+  border-radius: 50%;
+}
+.rating-title {
+  margin: 0.5em 0;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.rating-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rating-parag {
+  margin: 0.5em 0;
+  color: var(--bg-light-grey);
+  font-size: 0.9em;
+}
+
+.rating-num_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 1em 0;
+}
+
+.num_button {
+  border: none;
+  width: 3em;
+  border-radius: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-dark-blue);
+  color: var(--bg-medium-grey);
+  filter: brightness(130%);
+}
+
+.num_button:hover {
+  background: var(--bg-medium-grey);
+  color: var(--bg-white);
+}
+
+.num_button:focus {
+  background: var(--bg-orange);
+  color: var(--bg-white);
+}
+
+.rating-sumbit {
+  border: none;
+  padding: 0.7em;
+  width: 100%;
+  border-radius: 2em;
+  margin: 0.7em 0;
+  background: var(--bg-orange);
+  color: var(--bg-white);
+  letter-spacing: 0.1em;
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+.rating-sumbit:hover {
+  background: var(--bg-white);
+  color: var(--bg-orange);
+}
