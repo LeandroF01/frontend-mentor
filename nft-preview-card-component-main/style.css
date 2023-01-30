@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --bg-Soft-blue: hsl(215, 51%, 70%);
+  --bg-Cyan: hsl(178, 100%, 50%);
+
+  --bg-Very-dark-blue_main: hsl(217, 54%, 11%);
+  --bg-Very-dark-blue_card: hsl(216, 50%, 16%);
+  --bg-Very-dark-blue_line: hsl(215, 32%, 27%);
+  --bg-White: hsl(0, 0%, 100%);
+
+  --shadow-color: 210deg 89% 4%;
+
+  --shadow-elevation-medium: 0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.36),
+    1px 1.1px 1.7px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.6px 2.6px 4.1px -1.7px hsl(var(--shadow-color) / 0.36),
+    6.4px 6.4px 10.2px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  font-size: 18px;
+}
+
+h3,
+h6,
+p,
+a {
+  margin: 0%;
+  text-decoration: none;
+}
+
+.conatiner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-Very-dark-blue_main);
+  font-family: Outfit;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 18em;
+  height: 30em;
+  background: var(--bg-Very-dark-blue_card);
+  border-radius: 0.7em;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.conatiner-img {
+  width: 16em;
+  height: 20em;
+  margin: 1em;
+  border-radius: 0.6em;
+  overflow: hidden;
+  background: var(--bg-Cyan);
+  background-image: url("./images/icon-view.svg");
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img:hover {
+  filter: opacity(30%);
+}
+
+.container-info {
+  margin: 0 1em;
+}
+
+.name-coin {
+  color: var(--bg-White);
+  font-size: 1.2em;
+}
+
+.description-coin {
+  color: var(--bg-Soft-blue);
+  font-size: 0.8em;
+  margin: 1em 0;
+}
+
+.price-coin {
+  display: flex;
+  gap: 0.5em;
+  color: var(--bg-Cyan);
+  font-size: 0.8em;
+}
+
+.price-coin::before {
+  content: url("./images/icon-ethereum.svg");
+}
+
+.day-coin {
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.8em;
+  color: var(--bg-Soft-blue);
+}
+
+.day-coin::before {
+  content: url("./images/icon-clock.svg");
+}
+
+.container-price {
+  display: flex;
+  gap: 6em;
+}
+
+.line {
+  background: var(--bg-Very-dark-blue_line);
+  width: 16em;
+  height: 0.1em;
+  margin: 1em;
+}
+.footer-creator {
+  color: var(--bg-Soft-blue);
+  margin: 0em 1em 2em 1em;
+  font-size: 0.8em;
+}
+
+.creator-coin {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.text-color {
+  color: var(--bg-White);
+}
+.text-color:hover {
+  color: var(--bg-Cyan);
+}
+
+.creator-coin_img {
+  width: 1.7em;
+  border: 0.1em solid;
+  border-radius: 50%;
+}
