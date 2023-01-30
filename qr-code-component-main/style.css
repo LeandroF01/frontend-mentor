@@ -5,6 +5,13 @@
   --bg-light-gray: hsl(212, 45%, 89%);
   --bg-grayish-blue: hsl(220, 15%, 55%);
   --bg-dark-blue: hsl(218, 44%, 22%);
+
+  --shadow-color: 209deg 38% 45%;
+
+  --shadow-elevation-medium: 0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.36),
+    1px 1.1px 1.7px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.6px 2.6px 4.1px -1.7px hsl(var(--shadow-color) / 0.36),
+    6.4px 6.4px 10.2px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
 body {
@@ -36,6 +43,7 @@ p {
   height: 33em;
   background: var(--bg-white);
   border-radius: 1em;
+  box-shadow: var(--shadow-elevation-medium);
 }
 .card-container_img {
   width: 19em;
@@ -43,7 +51,6 @@ p {
   margin: 1em;
   border-radius: 1em;
   overflow: hidden;
-  background: red;
 }
 
 .card-img {
