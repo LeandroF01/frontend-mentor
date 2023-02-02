@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --bg-bright-orange: hsl(31, 77%, 52%);
+  --bg-dark-cyan: hsl(184, 100%, 22%);
+  --bg-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --bg-transparent-whit-paragraphs: hsla(0, 0%, 100%, 0.655);
+  --bg-very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  margin: 0%;
+}
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  font-size: 15px;
+  background: var(--bg-very-light-gray);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 18em;
+  height: 30em;
+  font-family: "Lexend Deca", sans-serif;
+}
+.card:nth-child(1) {
+  background: var(--bg-bright-orange);
+  border-radius: 0.4em 0 0 0.4em;
+}
+.card:nth-child(2) {
+  background: var(--bg-dark-cyan);
+}
+.card:nth-child(3) {
+  background: var(--bg-very-dark-cyan);
+  border-radius: 0 0.4em 0.4em 0;
+}
+.icon-cart {
+  width: 4em;
+}
+.card-margin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 3em;
+}
+.card-title {
+  color: var(--bg-very-light-gray);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 2.3em;
+}
+
+.card-text {
+  color: var(--bg-transparent-whit-paragraphs);
+  font-weight: 400;
+  font-size: 0.86em;
+  line-height: 1.5em;
+}
+
+.card-button {
+  border: none;
+  width: 11em;
+  height: 3.5em;
+  border-radius: 3.5em;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.orange {
+  color: var(--bg-bright-orange);
+}
+
+.cyan {
+  color: var(--bg-dark-cyan);
+}
+
+.darkcyan {
+  color: var(--bg-very-dark-cyan);
+}
+
+@media (max-width: 830px) {
+  .container-card {
+    flex-direction: column;
+    height: 100%;
+  }
+  .card:nth-child(1) {
+    border-radius: 0.4em 0.4em 0 0;
+  }
+
+  .card:nth-child(3) {
+    border-radius: 0 0 0.4em 0.4em;
+  }
+}
