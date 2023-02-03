@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
+    <title>Frontend Mentor | Profile card component</title>
+  </head>
+  <body>
+    <header class="container-card">
+      <img class="patter patter-top" src="./images/bg-pattern-top.svg" alt="" />
+      <article class="card">
+        <section class="card-info_container">
+          <img
+            class="card-image-avatar"
+            src="./images/image-victor.jpg"
+            alt=""
+          />
+          <section class="container-name-age">
+            <h2 class="card-name">Victor Crest</h2>
+            <h3 class="card-age">26</h3>
+          </section>
 
-  80K
-  Followers
+          <p class="card-city">London</p>
 
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <footer class="card-profile">
+            <ul class="card-contain-list">
+              <li class="list-cant">80K</li>
+              <li class="list-name">Followers</li>
+            </ul>
+            <ul class="card-contain-list">
+              <li class="list-cant">803K</li>
+              <li class="list-name">Likes</li>
+            </ul>
+            <ul class="card-contain-list">
+              <li class="list-cant">1.4K</li>
+              <li class="list-name">Photos</li>
+            </ul>
+          </footer>
+        </section>
+      </article>
+      <img
+        class="patter patter-bottom"
+        src="./images/bg-pattern-bottom.svg"
+        alt=""
+      />
+    </header>
+  </body>
 </html>
