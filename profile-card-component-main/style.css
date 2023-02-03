@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --bg-Dark-cyan: hsl(185, 75%, 39%);
+  --bg-Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --bg-Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --bg-Dark-gray: hsl(0, 0%, 49%);
+  --bg-Dark-gray-line: hsla(0, 0%, 59%, 0.37);
+  --bg-white: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0%;
+  font-family: "Kumbh Sans", sans-serif;
+}
+ul,
+li {
+  padding: 0%;
+  list-style: none;
+}
+h2,
+h3,
+p {
+  margin: 0%;
+}
+
+.container-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+  position: relative;
+  background: var(--bg-Dark-cyan);
+  overflow: hidden;
+}
+.patter {
+  position: absolute;
+}
+.patter-top {
+  transform: translate(-55%, -15%);
+}
+.patter-bottom {
+  transform: translate(50%, 40%);
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  height: 21em;
+  border-radius: 0.6em;
+  overflow: hidden;
+  background: var(--bg-white);
+  color: var(--bg-Very-dark-desaturated-blue);
+  background-image: url("./images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.card-info_container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+}
+.card-image-avatar {
+  width: 5em;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  border: 0.3em solid var(--bg-white);
+}
+
+.container-name-age {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 700;
+  margin: 1em 0 0.5em 0;
+}
+.card-name {
+  font-size: 1em;
+}
+.card-age {
+  color: var(--bg-Dark-gray);
+  font-size: 1em;
+  font-weight: 400;
+}
+.card-city {
+  color: var(--bg-Dark-gray);
+  font-size: 0.8em;
+}
+
+.card-profile {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-top: 0.1em solid var(--bg-Dark-gray-line);
+  width: 100%;
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.list-cant {
+  font-size: 1em;
+  font-weight: 700;
+}
+.list-name {
+  font-size: 0.65em;
+  letter-spacing: 0.2em;
+  color: var(--bg-Dark-gray);
+}
