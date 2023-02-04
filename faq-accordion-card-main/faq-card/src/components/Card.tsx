@@ -5,7 +5,7 @@ import arrow from "../../../images/icon-arrow-down.svg";
 const Card = () => {
   return (
     <article className="card">
-      {/* <section className="container-image">
+      <section className="container-image">
         <img className="card-box" src={box} alt="" />
         <img className="card-avatar" src={avatar} alt="" />
       </section>
@@ -61,7 +61,7 @@ const Card = () => {
             <img src={arrow} alt="arrow" />
           </button>
         </article>
-      </section> */}
+      </section>
     </article>
   );
 };
