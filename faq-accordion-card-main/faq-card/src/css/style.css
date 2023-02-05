@@ -22,7 +22,7 @@ body {
   height: 40em;
   border-radius: 2em;
   background: hsl(240deg, 5%, 91%);
-  overflow: hidden;
+  position: relative;
 }
 
 .container-image {
@@ -31,20 +31,24 @@ body {
   align-items: center;
   width: 50%;
   height: 100%;
-  position: relative;
+  overflow: hidden;
+  background-image: url("../assets/bg-pattern-desktop.svg");
+  background-size: 62em;
+  background-repeat: no-repeat;
+  background-position: -33em -13em;
 }
 
 .card-box {
+  width: 12em;
   position: absolute;
-  top: 10em;
-  left: -8em;
-  z-index: 1;
+  top: 18em;
+  left: -5.7em;
 }
 
 .card-avatar {
   width: 100%;
   height: auto;
-  transform: translateX(-2em);
+  transform: translateX(-6em);
 }
 
 .container-questions {

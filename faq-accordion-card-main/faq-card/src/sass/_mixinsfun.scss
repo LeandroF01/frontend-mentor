@@ -3,3 +3,11 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin background-img {
+  background: {
+    size: 62em;
+    repeat: no-repeat;
+    position: -33em -13em;
+  }
+}

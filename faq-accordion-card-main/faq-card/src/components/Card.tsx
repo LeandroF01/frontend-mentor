@@ -6,9 +6,9 @@ const Card = () => {
   return (
     <article className="card">
       <section className="container-image">
-        <img className="card-box" src={box} alt="" />
         <img className="card-avatar" src={avatar} alt="" />
       </section>
+      <img className="card-box" src={box} alt="" />
       <section className="container-questions">
         <h2 className="card-title">FAQ</h2>
         <article className="card-questions">
