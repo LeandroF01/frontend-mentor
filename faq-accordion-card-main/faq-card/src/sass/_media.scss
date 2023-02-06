@@ -1,0 +1,22 @@
+@use "./mixinsfun";
+
+@media (max-width: 1000px) {
+  .App {
+    height: 100%;
+  }
+  .card {
+    width: 30em;
+    margin: 1em;
+    padding: 4em 0;
+  }
+  .container-questions {
+    @include mixinsfun.create-flex;
+  }
+  .container-image {
+  }
+  .card-box {
+  }
+  .card-avatar {
+    width: 1em;
+  }
+}

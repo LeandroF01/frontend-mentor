@@ -5,6 +5,24 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+@media (max-width: 1000px) {
+  .App {
+    height: 100%;
+  }
+  .card {
+    width: 30em;
+    margin: 1em;
+    padding: 4em 0;
+  }
+  .container-questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-avatar {
+    width: 1em;
+  }
+}
 .App {
   display: flex;
   justify-content: center;
@@ -18,8 +36,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80em;
-  height: 40em;
+  flex-wrap: wrap;
+  max-width: 80em;
+  min-height: 40em;
   border-radius: 2em;
   background: hsl(240deg, 5%, 91%);
   position: relative;
@@ -29,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40em;
   height: 100%;
   overflow: hidden;
   background-image: url("../assets/bg-pattern-desktop.svg");
@@ -52,8 +71,11 @@ body {
 }
 
 .container-questions {
-  width: 50%;
-  margin: 0 6em 3em 3em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40em;
+  height: 100%;
 }
 
 .card-title {
@@ -62,25 +84,52 @@ body {
 
 .card-questions {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
   font-size: 1.2em;
   padding: 1.2em 0;
   border-bottom: 1px solid hsl(240deg, 6%, 50%);
 }
 
-.text-questions {
-  display: none;
+.color-text {
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
 }
 
+.text-questions {
+  animation: des 1.2s;
+  color: hsl(240deg, 6%, 50%);
+  font-weight: 400;
+}
+
+@keyframes des {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .arrow-questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
   width: 1.5em;
   height: 1.5em;
   background: none;
-  display: flex;
-  justify-content: center;
   border: none;
   cursor: pointer;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

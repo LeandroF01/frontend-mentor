@@ -11,3 +11,8 @@
     position: -33em -13em;
   }
 }
+
+@mixin create-flex-questions {
+  display: flex;
+  justify-content: center;
+}

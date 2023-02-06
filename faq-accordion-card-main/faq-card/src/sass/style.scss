@@ -1,7 +1,9 @@
 @use "./reset";
 @use "./mixinsfun";
 @use "./variables";
+@use "./media";
 
+// HEADER
 .App {
   @include mixinsfun.create-flex;
   width: 100%;
@@ -9,20 +11,22 @@
   background: variables.$Gradiant-bg;
 }
 
+// CARD
 .card {
   @include mixinsfun.create-flex;
-  width: 80em;
-  height: 40em;
+  flex-wrap: wrap;
+  max-width: 80em;
+  min-height: 40em;
   border-radius: 2em;
   background: variables.$Ligh-grayish-blue;
   position: relative;
 }
-
+// IMAGE
 .container-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40em;
   height: 100%;
   overflow: hidden;
   background-image: url("../assets/bg-pattern-desktop.svg");
@@ -39,30 +43,61 @@
   height: auto;
   transform: translateX(-6em);
 }
+
+// QUESTIONS
+
 .container-questions {
-  width: 50%;
-  margin: 0 6em 3em 3em;
+  @include mixinsfun.create-flex-questions;
+  flex-direction: column;
+  width: 40em;
+  height: 100%;
 }
 .card-title {
   font-size: 2em;
 }
+
 .card-questions {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
   font-size: 1.2em;
   padding: 1.2em 0;
   border-bottom: 1px solid variables.$Dar-grayi-blue;
 }
-.text-questions {
-  display: none;
+
+.color-text {
+  color: variables.$Ver-dar-desaturate-blue;
+  font-weight: 700;
 }
+.text-questions {
+  animation: des 1.2s;
+  color: variables.$Dar-grayi-blue;
+  font-weight: 400;
+}
+@keyframes des {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .arrow-questions {
+  @include mixinsfun.create-flex;
+  position: absolute;
+  right: 0;
   width: 1.5em;
   height: 1.5em;
   background: none;
-  display: flex;
-  justify-content: center;
   border: none;
   cursor: pointer;
+}
+.arrow-up {
+  transform: rotate(180deg);
+  transition: 1s;
 }
