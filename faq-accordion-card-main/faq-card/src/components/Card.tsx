@@ -19,8 +19,10 @@ const Card = () => {
     return filter;
   };
 
+  const height = value !== 0 ? "card-height" : "";
+
   return (
-    <article className="card">
+    <article className={`card ${height}`}>
       <section className="container-image">
         <img className="card-avatar" src={avatar} alt="" />
       </section>
