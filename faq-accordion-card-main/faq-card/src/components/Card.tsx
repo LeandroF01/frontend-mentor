@@ -9,7 +9,8 @@ const Card = () => {
 
   const handleCLick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const filter = data.filter((el) => {
-      el.id === Number(e.target.dataset.number) && setValue(el.id);
+      el.id === Number((e.target as HTMLButtonElement).dataset.number) &&
+        setValue(el.id);
     });
 
     if (value !== 0) {
