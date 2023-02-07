@@ -5,24 +5,6 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
-@media (max-width: 1000px) {
-  .App {
-    height: 100%;
-  }
-  .card {
-    width: 30em;
-    margin: 1em;
-    padding: 4em 0;
-  }
-  .container-questions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .card-avatar {
-    width: 1em;
-  }
-}
 .App {
   display: flex;
   justify-content: center;
@@ -37,8 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 80em;
-  min-height: 40em;
+  width: 80em;
+  height: 40em;
   border-radius: 2em;
   background: hsl(240deg, 5%, 91%);
   position: relative;
@@ -54,7 +36,7 @@ body {
   background-image: url("../assets/bg-pattern-desktop.svg");
   background-size: 62em;
   background-repeat: no-repeat;
-  background-position: -33em -13em;
+  background-position: -29em -14em;
 }
 
 .card-box {
@@ -130,6 +112,45 @@ body {
 .arrow-up {
   transform: rotate(180deg);
   transition: 1s;
+}
+
+@media (max-width: 1000px) {
+  .App {
+    align-items: end;
+  }
+  .card {
+    width: 30em;
+    height: 42em;
+    margin: 2em 0;
+  }
+  .card-height {
+    height: 45em;
+  }
+  .container-image {
+    position: absolute;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+    background-size: 20em;
+    background-repeat: no-repeat;
+    background-position: 5em -12em;
+  }
+  .card-box {
+    width: 6em;
+    top: -3em;
+    left: 6em;
+  }
+  .card-avatar {
+    width: 20em;
+    height: auto;
+    transform: translate(0, -24em);
+  }
+  .container-questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
