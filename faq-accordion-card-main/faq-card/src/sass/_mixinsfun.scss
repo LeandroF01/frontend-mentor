@@ -4,11 +4,18 @@
   align-items: center;
 }
 
-@mixin background-img {
+@mixin background-img-desk {
   background: {
     size: 62em;
     repeat: no-repeat;
-    position: -33em -13em;
+    position: -29em -14em;
+  }
+}
+@mixin background-img-mob {
+  background: {
+    size: 20em;
+    repeat: no-repeat;
+    position: 5em -12em;
   }
 }
 
