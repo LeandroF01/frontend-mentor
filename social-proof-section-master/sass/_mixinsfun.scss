@@ -1,0 +1,14 @@
+@mixin create-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bg-star {
+  height: 1em;
+  width: 1em;
+  background-image: url("../images/icon-star.svg");
+  background: {
+    size: contain;
+  }
+}
