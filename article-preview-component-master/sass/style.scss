@@ -1,0 +1,85 @@
+@use "./variables";
+@use "./reset";
+@use "./mixinsfun";
+
+// HEADER
+.container-card {
+  @include mixinsfun.diplay-flex;
+  width: 100%;
+  height: 100vh;
+  background: variables.$Light-Grayish-Blue;
+}
+
+// CARD
+.card {
+  display: flex;
+  width: 52em;
+  height: 19em;
+  background: variables.$White;
+  border-radius: 0.7em;
+  overflow: hidden;
+}
+
+//IMAGE
+.container-image {
+  width: 20em;
+  height: 100%;
+}
+.image-drawers {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//INFO
+.card-info {
+  @include mixinsfun.diplay-flex;
+  width: 32em;
+  flex-direction: column;
+  margin: 2.5em;
+}
+.info-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: variables.$Very-Dark-Grayish-Blue;
+}
+.info-parraf {
+  font-size: 1em;
+  color: variables.$Desaturated-Dark-Blue;
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+// SHARE
+.container-share {
+  @include mixinsfun.diplay-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.share-avatar {
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+}
+
+.share-profile {
+  display: flex;
+}
+.share-name {
+  color: variables.$Very-Dark-Grayish-Blue;
+  font-size: 0.9em;
+}
+.share-date {
+  color: variables.$Desaturated-Dark-Blue;
+  font-size: 0.9em;
+}
+.container-name {
+  margin: 0 1em;
+}
+.share-button {
+  width: 2.2em;
+  height: 2.2em;
+  border: none;
+  border-radius: 100%;
+}
