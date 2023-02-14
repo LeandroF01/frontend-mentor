@@ -21,16 +21,21 @@ body {
 
 .card {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 52em;
-  height: 19em;
+  height: 20em;
   background: hsl(0deg, 0%, 100%);
   border-radius: 0.7em;
-  overflow: hidden;
+  position: relative;
+  margin: 1em;
 }
 
 .container-image {
-  width: 20em;
-  height: 100%;
+  border-radius: 0.7em 0 0 0.7em;
+  overflow: hidden;
+  width: 25em;
+  height: 20em;
 }
 
 .image-drawers {
@@ -43,9 +48,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32em;
+  max-width: 30em;
+  height: 20em;
   flex-direction: column;
-  margin: 2.5em;
+  margin: 0 2em;
 }
 
 .info-title {
@@ -58,7 +64,7 @@ body {
   font-size: 1em;
   color: hsl(214deg, 17%, 51%);
   font-weight: 500;
-  margin: 1em 0;
+  margin: 2em 0;
 }
 
 .container-share {
@@ -98,6 +104,97 @@ body {
   height: 2.2em;
   border: none;
   border-radius: 100%;
+  cursor: pointer;
+  background: hsl(210deg, 46%, 95%);
+}
+
+.share-button::before {
+  content: url("../images/icon-share.svg");
+}
+
+.share-button:focus {
+  background: hsl(212deg, 23%, 69%);
+}
+
+.share-button:focus::before {
+  content: url("../images/icon-share-white.svg");
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 15em;
+  height: 3em;
+  border-radius: 0.6em;
+  position: absolute;
+  bottom: 6em;
+  right: -4em;
+  background: hsl(217deg, 19%, 35%);
+  z-index: 2;
+}
+
+.title-share {
+  color: hsl(212deg, 23%, 69%);
+  font-size: 0.8em;
+  letter-spacing: 0.3em;
+}
+
+.social-image {
+  width: 1.1em;
+}
+
+.modal-open::after {
+  content: "";
+  background: hsl(217deg, 19%, 35%);
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  bottom: -0.5em;
+  rotate: 45deg;
+  z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    width: 25em;
+    height: 38em;
+  }
+  .container-image {
+    border-radius: 0.7em 0.7em 0 0;
+  }
+  .card-info {
+    margin: 2em;
+  }
+  .modal-open {
+    justify-content: start;
+    width: 100%;
+    height: 6em;
+    border-radius: 0 0 0.6em 0.6em;
+    bottom: 0;
+    left: 0;
+    background: hsl(217deg, 19%, 35%);
+    z-index: 2;
+  }
+  .modal-open::after {
+    display: none;
+  }
+  .share-button {
+    z-index: 3;
+  }
+  .social-image {
+    width: 1.4em;
+  }
+  .title-share {
+    font-size: 1em;
+    margin-left: 2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
