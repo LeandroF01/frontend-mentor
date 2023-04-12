@@ -13,16 +13,7 @@
 
 		<title>Frontend Mentor | Four card feature section</title>
 
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
+		<link rel="stylesheet" href="./style/style.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -41,47 +32,61 @@
 						<p class="card__parraf">
 							Monitors activity to identify project roadblocks
 						</p>
-						<img src="" alt="" class="card__img" />
+						<div class="card__margin-img">
+							<img
+								src="./images/icon-supervisor.svg"
+								alt="icon-supervisor"
+								class="card__img" />
+						</div>
 					</div>
 				</article>
-				<article class="card">
-					<div class="card__margin">
-						<h2 class="card__title">Team Builder</h2>
-						<p class="card__parraf">
-							Scans our talent network to create the optimal team for your
-							project
-						</p>
-						<img src="" alt="" class="card__img" />
-					</div>
-				</article>
-				<article class="card">
-					<div class="card__margin">
-						<h2 class="card__title">Karma</h2>
-						<p class="card__parraf">
-							Regularly evaluates our talent to ensure quality
-						</p>
-						<img src="" alt="" class="card__img" />
-					</div>
-				</article>
+				<section class="container__card-two">
+					<article class="card">
+						<div class="card__margin">
+							<h2 class="card__title">Team Builder</h2>
+							<p class="card__parraf">
+								Scans our talent network to create the optimal team for your
+								project
+							</p>
+							<div class="card__margin-img">
+								<img
+									src="./images/icon-team-builder.svg"
+									alt="icon-team-builder"
+									class="card__img" />
+							</div>
+						</div>
+					</article>
+					<article class="card">
+						<div class="card__margin">
+							<h2 class="card__title">Karma</h2>
+							<p class="card__parraf">
+								Regularly evaluates our talent to ensure quality
+							</p>
+							<div class="card__margin-img">
+								<img
+									src="./images/icon-karma.svg"
+									alt="icon-karma"
+									class="card__img" />
+							</div>
+						</div>
+					</article>
+				</section>
+
 				<article class="card">
 					<div class="card__margin">
 						<h2 class="card__title">Calculator</h2>
 						<p class="card__parraf">
 							Uses data from past projects to provide better delivery estimates
 						</p>
-						<img src="" alt="" class="card__img" />
+						<div class="card__margin-img">
+							<img
+								src="./images/icon-calculator.svg"
+								alt="icon-calculator"
+								class="card__img" />
+						</div>
 					</div>
 				</article>
 			</section>
 		</header>
-
-		<footer>
-			<p class="attribution">
-				Challenge by
-				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-					>Frontend Mentor</a
-				>. Coded by <a href="#">Your Name Here</a>.
-			</p>
-		</footer>
 	</body>
 </html>
