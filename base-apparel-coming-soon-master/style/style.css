@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+/* ## Colors */
+
+/* ### Primary */
+
+--cl-Desaturated-Red: hsl(0, 36%, 70%);
+--cl-Soft-Red: hsl(0, 93%, 68%);
+
+/* ### Neutral */
+
+--cl-Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+/* ### Gradients */
+
+--cl-Linear1: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+--cl-Linear2: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+/* ## Typography */
+
+/* ### Body Copy */
+--Font: 16px;
+
+}
+
+body{
+    margin: 0%;
+    font-family: Josefin Sans, sans-serif;
+    font-size: var(--Font);
+}
+h2, p{
+    margin: 0;
+}
+
+input, button{
+    border: none;
+}
+
+.card{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: red;  
+}
+
+.card__info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 12em;
+    background: blue;
+}
+
+
+.info__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+}
+.info__logo{
+    width: 10em;
+    margin: 3em 0;
+}
+
+.info__title{
+    max-width: 5em;
+    font-size: 5em;
+    font-weight: 200;
+    margin: .5em 0;
+   
+}
+
+.title__bold{
+    font-weight: 600;
+}
+
+.info__parraf{
+    width: 30em;
+    line-height: 1em;
+}
+
+.card__img{
+    width: 100%;
+    height: 100%;
+}
+
+.img__hero{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.form__input{
+   width: 100%;
+   height: 3.4em;
+   border-radius: 3.4em;
+   margin: 3em 0;
+}
+
+.form__button{
+    width: 6.5em;
+    height: 3.7em;
+    border-radius:3.4em;
+    cursor: pointer;
+    background: black;
+    position: absolute;
+    right: 0;
+  
+}
