@@ -1,8 +1,9 @@
 # Frontend Mentor 
 
-This is a solution to the ![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
+# Frontend Mentor - 3-column preview card component solution
+![nombre de la imagen](https://res.cloudinary.com/dz209s6jk/image/upload/v1617293350/Challenges/ofrkupd8a9wh1wenvr8c.jpg)
 Link solution: https://3-column-preview-card-component-main2.netlify.app/
+
 https://article-preview-component-master2.netlify.app/
 https://faq-accordion-card-main2.netlify.app/
 https://four-card-feature-section-master2.netlify.app/
