@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+/* ## Colors */
+
+/* ### Primary */
+
+--cl-Red: hsl(0, 100%, 74%); 
+--cl-Green: hsl(154, 59%, 51%);
+
+/* ### Accent */
+
+--cl-Blue: hsl(248, 32%, 49%);
+
+/* ### Neutral */
+
+--cl-Dark-Blue: hsl(249, 10%, 26%); 
+--cl-Grayish-Blue: hsl(246, 25%, 77%);
+
+/* ## Typography */
+
+--Font-size: 16px;
+
+}
+
+body{
+    margin: 0%;
+    font-family: Poppins, sans-serif;
+    font-size: var(--Font-size);
+}
+
+.container__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card-text {
+    width: 50%;
+    margin: 5em;
+}
+
+.card-text__title {
+}
+.card-text__parraf {
+}
+
+
+
+.card-form {
+    width: 50%;
+    margin: 5em;
+}
+.card-form__ad {
+}
+.ad__text {
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form__input {
+}
+.form__ad{}
+
+
