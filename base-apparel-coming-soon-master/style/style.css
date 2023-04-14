@@ -1,120 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 
-:root{
-/* ## Colors */
+:root {
+	/* ## Colors */
 
-/* ### Primary */
+	/* ### Primary */
 
---cl-Desaturated-Red: hsl(0, 36%, 70%);
---cl-Soft-Red: hsl(0, 93%, 68%);
+	--cl-Desaturated-Red: hsla(0, 36%, 70%, 0.755);
+	--cl-Soft-Red: hsl(0, 93%, 68%);
 
-/* ### Neutral */
+	/* ### Neutral */
 
---cl-Dark-Grayish-Red: hsl(0, 6%, 24%);
+	--cl-Dark-Grayish-Red: hsl(0, 6%, 24%);
 
-/* ### Gradients */
+	/* ### Gradients */
 
---cl-Linear1: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
---cl-Linear2: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+	--cl-Linear1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+	--cl-Linear2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
 
-/* ## Typography */
+	/* ## Typography */
 
-/* ### Body Copy */
---Font: 16px;
-
+	/* ### Body Copy */
+	--Font: 16px;
 }
 
-body{
-    margin: 0%;
-    font-family: Josefin Sans, sans-serif;
-    font-size: var(--Font);
+body {
+	margin: 0%;
+	font-family: Josefin Sans, sans-serif;
+	font-size: var(--Font);
 }
-h2, p{
-    margin: 0;
-}
-
-input, button{
-    border: none;
+h2,
+p {
+	margin: 0;
 }
 
-.card{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    background: red;  
+input,
+button {
+	border: none;
+	outline: none;
 }
 
-.card__info{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin: 0 12em;
-    background: blue;
+.card {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(var(--cl-Linear1));
 }
 
-
-.info__text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    
-}
-.info__logo{
-    width: 10em;
-    margin: 3em 0;
+.card__info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	margin: 1em;
 }
 
-.info__title{
-    max-width: 5em;
-    font-size: 5em;
-    font-weight: 200;
-    margin: .5em 0;
-   
+.card__img {
+	object-fit: contain;
+	width: 50%;
+	height: 100%;
 }
 
-.title__bold{
-    font-weight: 600;
+.info__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 30em;
+}
+.info__logo {
+	top: 0;
+	width: 10em;
+	margin: 3em 0;
+	position: absolute;
 }
 
-.info__parraf{
-    width: 30em;
-    line-height: 1em;
+.info__title {
+	font-size: 4em;
+	font-weight: 300;
+	margin: 0.5em 0;
+	color: var(--cl-Desaturated-Red);
+	letter-spacing: 0.25em;
 }
 
-.card__img{
-    width: 100%;
-    height: 100%;
+.title__bold {
+	font-weight: 600;
+	color: var(--cl-Dark-Grayish-Red);
 }
 
-.img__hero{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
+.info__parraf {
+	font-size: 1em;
+	line-height: 1em;
+	color: var(--cl-Desaturated-Red);
+	line-height: 160%;
 }
 
-.form__input{
-   width: 100%;
-   height: 3.4em;
-   border-radius: 3.4em;
-   margin: 3em 0;
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: relative;
 }
 
-.form__button{
-    width: 6.5em;
-    height: 3.7em;
-    border-radius:3.4em;
-    cursor: pointer;
-    background: black;
-    position: absolute;
-    right: 0;
-  
+.form__input {
+	width: 100%;
+	height: 3.6em;
+	border-radius: 3.6em;
+	margin: 3em 0;
+	border: solid 2px var(--cl-Desaturated-Red);
+	text-indent: 1em;
+	background: linear-gradient(var(--cl-Linear1));
+}
+
+.form__input::placeholder {
+	color: var(--cl-Desaturated-Red);
+}
+
+.input__icon {
+	position: absolute;
+	right: 0;
+	display: none;
+}
+
+.form__button {
+	width: 6.5em;
+	height: 3.8em;
+	border-radius: 3.4em;
+	background: linear-gradient(var(--cl-Linear2));
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+.active {
+	display: block;
+}
+
+@media (max-width: 1050px) {
+	.card {
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+		text-align: center;
+		height: 100%;
+	}
+	.card__img {
+		margin-top: 7em;
+		object-fit: cover;
+		width: 100%;
+		height: 30em;
+	}
+	.info__title {
+		font-size: 3em;
+	}
 }
