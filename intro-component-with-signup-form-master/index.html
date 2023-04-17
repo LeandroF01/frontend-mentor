@@ -16,34 +16,60 @@
 	</head>
 	<body>
 		<header class="container__card">
-			<section class="card-text">
-				<h2 class="card-text__title">Learn to code by watching others</h2>
-				<p class="card-text__parraf">
-					See how experienced developers solve problems in real-time. Watching
-					scripted tutorials is great, but understanding how developers think is
-					invaluable.
-				</p>
-			</section>
-			<section class="card-form">
-				<article class="card-form__ad">
-					<p class="ad__text">Try it free 7 days then $20/mo. thereafter</p>
-				</article>
-				<form class="form" action="">
-					<label for="">First Name </label>
-					<input class="form__first-name form__input" type="text" />
-					<label for="">Last Name </label>
-					<input class="form__last-name form__input" type="text" />
-					<label for="">Email Address </label>
-					<input class="form__first-email form__input" type="text" />
-					<label for="">Password </label>
-					<input class="form__first-password form__input" type="password" />
-					<button class="form__button">Claim your free trial</button>
-					<span class="form__ad"
-						>By clicking the button, you are agreeing to our Terms and
-						Services</span
-					>
-				</form>
-			</section>
+			<article class="card">
+				<section class="card-text">
+					<h2 class="card-text__title">Learn to code by watching others</h2>
+					<p class="card-text__parraf">
+						See how experienced developers solve problems in real-time. Watching
+						scripted tutorials is great, but understanding how developers think
+						is invaluable.
+					</p>
+				</section>
+				<section class="card-form">
+					<article class="card-form__ad">
+						<p class="ad__text">
+							<span class="text__bold">Try it free 7 days</span> then $20/mo.
+							thereafter
+						</p>
+					</article>
+					<form class="form" action="">
+						<div class="form__container-input">
+							<input
+								class="form__first-name form__input"
+								type="text"
+								placeholder="First Name" />
+							<span class="validation validation__first-name"></span>
+						</div>
+						<div class="form__container-input">
+							<input
+								class="form__last-name form__input"
+								type="text"
+								placeholder="Last Name" />
+							<span class="validation validation__last-name"></span>
+						</div>
+						<div class="form__container-input">
+							<input
+								class="form__first-email form__input"
+								type="text"
+								placeholder="Email Address" />
+							<span class="validation validation__email"></span>
+						</div>
+
+						<div class="form__container-input">
+							<input
+								class="form__first-password form__input"
+								type="password"
+								placeholder="Password" />
+							<span class="validation validation__password"></span>
+						</div>
+						<button class="form__button">CLAIM YOUR FREE TRIAL</button>
+						<span class="form__ad"
+							>By clicking the button, you are agreeing to our
+							<a href="#" class="ad__red">Terms and Services</a></span
+						>
+					</form>
+				</section>
+			</article>
 		</header>
 		<script src="./js/index.js"></script>
 	</body>
