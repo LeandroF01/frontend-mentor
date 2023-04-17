@@ -1,68 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-:root{
-/* ## Colors */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+	/* ## Colors */
 
-/* ### Primary */
+	/* ### Primary */
 
---cl-Red: hsl(0, 100%, 74%); 
---cl-Green: hsl(154, 59%, 51%);
+	--cl-Red: hsl(0, 100%, 74%);
+	--cl-Green: hsl(154, 59%, 51%);
 
-/* ### Accent */
+	/* ### Accent */
 
---cl-Blue: hsl(248, 32%, 49%);
+	--cl-Blue: hsl(248, 32%, 49%);
 
-/* ### Neutral */
+	/* ### Neutral */
 
---cl-Dark-Blue: hsl(249, 10%, 26%); 
---cl-Grayish-Blue: hsl(246, 25%, 77%);
+	--cl-Dark-Blue: hsl(249, 10%, 26%);
+	--cl-Grayish-Blue: hsl(246, 25%, 77%);
+	--cl-Grayish-Blue2: hsla(246, 25%, 77%, 0.56);
+	--cl-White: hsl(0, 0%, 100%);
 
-/* ## Typography */
+	/* ## Typography */
 
---Font-size: 16px;
+	--Font-size: 16px;
 
+    --shadow-color: 0deg 64% 45%;
+   
+    --shadow-elevation-medium:
+      0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+      0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+      2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+      5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
-body{
-    margin: 0%;
-    font-family: Poppins, sans-serif;
-    font-size: var(--Font-size);
+body {
+	margin: 0%;
+	font-family: Poppins, sans-serif;
+	font-size: var(--Font-size);
+}
+a {
+	text-decoration: none;
+}
+input,
+button {
+	border: none;
+	outline: none;
 }
 
 .container__card {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background: var(--cl-Red);
+	background-image: url("../images/bg-intro-desktop.png");
+}
+
+.card {
+	display: flex;
+	justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+	flex-wrap: wrap;
+	max-width: 80em;
+	margin: 8em;
 }
 
 .card-text {
-    width: 50%;
-    margin: 5em;
+	max-width: 35em;
+    height: 100%;
+	color: var(--cl-White);
 }
 
 .card-text__title {
+	font-size: 3em;
 }
 .card-text__parraf {
+	font-size: 1em;
 }
-
-
 
 .card-form {
-    width: 50%;
-    margin: 5em;
+	width: 30em;
+    height: 100%;
 }
+
 .card-form__ad {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 3.2em;
+	background: var(--cl-Blue);
+	border-radius: 0.5em;
+	margin: 1em 0;
+    box-shadow: var(--shadow-elevation-medium);
 }
 .ad__text {
+	color: var(--cl-White);
+	font-weight: 400;
+	font-size: 0.85em;
+}
+.text__bold {
+	font-weight: 600;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: auto;
+	border-radius: 0.5em;
+	background: var(--cl-White);
+	gap: 0.9em;
+	padding: 2.5em;
+    box-shadow: var(--shadow-elevation-medium);
+}
+.form__container-input {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 .form__input {
+	width: 100%;
+	height: 3.2em;
+	border-radius: 0.3em;
+	border: 2px solid var(--cl-Grayish-Blue2);
+	text-indent: 2em;
+	font-weight: 600;
+	color: var(--cl-Dark-Blue);
 }
-.form__ad{}
 
+.form__input:focus {
+	border: 2px solid var(--cl-Grayish-Blue);
+}
 
+.form__button {
+	width: 100%;
+	border-radius: 0.3em;
+	height: 3.5em;
+	background: var(--cl-Green);
+	cursor: pointer;
+	font-weight: 600;
+	color: var(--cl-White);
+}
+.form__ad {
+	font-size: 0.6em;
+	font-weight: 600;
+	color: var(--cl-Grayish-Blue);
+}
+.ad__red {
+	color: var(--cl-Red);
+}
+
+.validation {
+	text-align: start;
+	font-size: 0.7em;
+	color: var(--cl-Red);
+}
+
+.good {
+	color: var(--cl-Green);
+}
+
+@media (max-width: 1300px) {
+    .container__card {
+        height: 100%;}
+	.card {
+		margin: 1em;
+       
+	}
+    .card-form {
+        width: 100%;
+        
+    }
+	.card-text {
+		text-align: center;
+	}
+}
