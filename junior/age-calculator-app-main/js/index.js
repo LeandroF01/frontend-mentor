@@ -10,6 +10,10 @@ const validationDay = document.querySelector(".validation__day");
 const validationMonth = document.querySelector(".validation__month");
 const validationYear = document.querySelector(".validation__year");
 
+const errorDay = document.querySelector(".form__validation:nth-of-type(1)");
+const errorMonth = document.querySelector(".form__validation:nth-of-type(2)");
+const errorYear = document.querySelector(".form__validation:nth-of-type(3)");
+
 //view
 const yearsView = document.querySelector(".years");
 const monthsView = document.querySelector(".months");
@@ -48,53 +52,75 @@ form.addEventListener("submit", (event) => {
 	// verificar si los campos están vacíos
 	if (!day) {
 		validationDay.textContent = "Required Field";
+		errorDay.classList.add("error");
+		return;
 	} else {
 		validationDay.textContent = "";
+		errorDay.classList.remove("error");
 	}
+
 	if (!month) {
 		validationMonth.textContent = "Required Field";
+		errorMonth.classList.add("error");
+		return;
 	} else {
 		validationMonth.textContent = "";
+		errorMonth.classList.remove("error");
 	}
 
 	if (!year) {
 		validationYear.textContent = "Required Field";
+		errorYear.classList.add("error");
+		return;
 	} else {
 		validationYear.textContent = "";
+		errorYear.classList.remove("error");
 	}
 
 	// verificar si el número de día está entre 1 y 31
 	if (day < 1 || day > 31) {
-		validationDay.textContent = "Must be between 1 and 31";
+		validationDay.textContent = "Must be a valid day";
+		errorDay.classList.add("error");
 	} else {
 		validationDay.textContent = "";
+		errorDay.classList.remove("error");
 	}
 
 	// verificar si el número del mes está entre 1 y 12
 	if (month < 1 || month > 12) {
-		validationMonth.textContent = "The month number must be between 1 and 12";
+		validationMonth.textContent = "Must be a valid month";
+		errorMonth.classList.add("error");
 	} else {
 		validationMonth.textContent = "";
+		errorMonth.classList.remove("error");
 	}
 
 	// verificar si el número year está sobre el actual
 	if (year > new Date().getFullYear()) {
-		validationYear.textContent = "Can't be in the future";
+		validationYear.textContent = "Must be it the past";
+		errorYear.classList.add("error");
 	} else {
 		validationYear.textContent = "";
+		errorYear.classList.remove("error");
 	}
 
 	//verifica si el mes cuneta con esos dias
 	const lastDayOfMonth = new Date(year, month, 0).getDate();
 
-	if (day >= lastDayOfMonth) {
-		validationDay.textContent = `The date is not valid there are ${lastDayOfMonth} days in the month`;
+	if (day > lastDayOfMonth) {
+		validationDay.textContent = `There are only ${lastDayOfMonth} days`;
+		errorDay.classList.add("error");
 	} else {
 		validationDay.textContent = "";
+		errorDay.classList.remove("error");
 	}
 
 	// si se cumplieron las condiciones --> retorna
-	if (day && month && year) {
+	if (
+		errorDay.classList.length < 2 &&
+		errorMonth.classList.length < 2 &&
+		errorYear.classList.length < 2
+	) {
 		const date = ageCalculator(year, month, day);
 
 		yearsView.textContent = date.years;
