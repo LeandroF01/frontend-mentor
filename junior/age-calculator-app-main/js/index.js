@@ -38,49 +38,69 @@ const ageCalculator = (year, month, day) => {
 	return { years, months, days };
 };
 
-// form.addEventListener("submit", (event) => {
-// 	event.preventDefault();
+form.addEventListener("submit", (event) => {
+	event.preventDefault();
 
-// 	const day = inputDay.value;
-// 	const month = inputMonth.value;
-// 	const year = inputYear.value;
-// 	console.log(day);
+	const day = inputDay.value;
+	const month = inputMonth.value;
+	const year = inputYear.value;
 
-// 	// verificar si los campos están vacíos
-// 	if (!day) {
-// 		validationDay.textContent = "Required Field";
-// 	} else {
-// 		validationDay.textContent = "";
-// 	}
-// 	if (!month) {
-// 		validationMonth.textContent = "Required Field";
-// 	} else {
-// 		validationMonth.textContent = "";
-// 	}
+	// verificar si los campos están vacíos
+	if (!day) {
+		validationDay.textContent = "Required Field";
+	} else {
+		validationDay.textContent = "";
+	}
+	if (!month) {
+		validationMonth.textContent = "Required Field";
+	} else {
+		validationMonth.textContent = "";
+	}
 
-// 	if (!year) {
-// 		validationYear.textContent = "Required Field";
-// 	} else {
-// 		validationYear.textContent = "";
-// 	}
+	if (!year) {
+		validationYear.textContent = "Required Field";
+	} else {
+		validationYear.textContent = "";
+	}
 
-// 	// verificar si el número de día está entre 1 y 31
-// 	if (day < 1 || day > 31) {
-// 		validationDay.textContent = "Must be between 1 and 31";
-// 	} else {
-// 		validationDay.textContent = "";
-// 	}
+	// verificar si el número de día está entre 1 y 31
+	if (day < 1 || day > 31) {
+		validationDay.textContent = "Must be between 1 and 31";
+	} else {
+		validationDay.textContent = "";
+	}
 
-// 	// verificar si el número del mes está entre 1 y 12
-// 	if (month < 1 || month > 12) {
-// 		monthsView.textContent = "The month number must be between 1 and 12";
-// 	}
+	// verificar si el número del mes está entre 1 y 12
+	if (month < 1 || month > 12) {
+		validationMonth.textContent = "The month number must be between 1 and 12";
+	} else {
+		validationMonth.textContent = "";
+	}
 
-// 	const date = ageCalculator(year, month, day);
+	// verificar si el número year está sobre el actual
+	if (year > new Date().getFullYear()) {
+		validationYear.textContent = "Can't be in the future";
+	} else {
+		validationYear.textContent = "";
+	}
 
-// 	yearsView.textContent = date.years;
+	//verifica si el mes cuneta con esos dias
+	const lastDayOfMonth = new Date(year, month, 0).getDate();
 
-// 	monthsView.textContent = date.months;
+	if (day >= lastDayOfMonth) {
+		validationDay.textContent = `The date is not valid there are ${lastDayOfMonth} days in the month`;
+	} else {
+		validationDay.textContent = "";
+	}
 
-// 	daysView.textContent = date.days;
-// });
+	// si se cumplieron las condiciones --> retorna
+	if (day && month && year) {
+		const date = ageCalculator(year, month, day);
+
+		yearsView.textContent = date.years;
+
+		monthsView.textContent = date.months;
+
+		daysView.textContent = date.days;
+	}
+});
