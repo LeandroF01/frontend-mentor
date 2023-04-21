@@ -1,6 +1,7 @@
-# Frontend Mentor
+<details>
+  <summary>Proyects of Frontend Mentor Newbie</summary>
 
-# Frontend Mentor - 3-column preview card component solution
+# 3-column preview card component solution
 
 ![3-column preview card](https://res.cloudinary.com/dz209s6jk/image/upload/v1617293350/Challenges/ofrkupd8a9wh1wenvr8c.jpg)
 Link solution: https://3-column-preview-card-component-main2.netlify.app/
@@ -59,3 +60,7 @@ Link solution: https://social-proof-section-master2.netlify.app/
 
 ![Stats preview card component](https://res.cloudinary.com/dz209s6jk/image/upload/v1618491773/Challenges/pnczwsvslfwimxcqjrwm.jpg)
 Link solution: https://stats-preview-card-component-main2.netlify.app/
+  
+  
+ <details>
+  <summary>Proyects of Frontend Mentor Junior</summary>
