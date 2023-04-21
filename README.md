@@ -60,7 +60,32 @@ Link solution: https://social-proof-section-master2.netlify.app/
 
 ![Stats preview card component](https://res.cloudinary.com/dz209s6jk/image/upload/v1618491773/Challenges/pnczwsvslfwimxcqjrwm.jpg)
 Link solution: https://stats-preview-card-component-main2.netlify.app/
+
+# Base Apparel coming soon page solution
+
+![Base Apparel coming soon page](https://res.cloudinary.com/dz209s6jk/image/upload/v1564914815/Challenges/ae67ohzys48frbejvyce.jpg)
+Link solution: https://base-apparel-coming-soon-master2.netlify.app/
+
+# Huddle landing page with single introductory section solution
+
+![Huddle landing page with single introductory section](https://res.cloudinary.com/dz209s6jk/image/upload/v1554379169/Challenges/yjly0l5ohx3f2kz6bbvg.jpg)
+Link solution: https://huddle-landing-page-with-single-int2.netlify.app/
+
+# Intro component with sign up form solution
+
+![Intro component with sign up form](https://res.cloudinary.com/dz209s6jk/image/upload/v1559829911/Challenges/cbyamvcsyhwlvnlelr5n.jpg)
+Link solution: https://intro-component-with-signup-form-mas2.netlify.app/
+
+# Ping coming soon page solution
+
+![Ping coming soon page](https://res.cloudinary.com/dz209s6jk/image/upload/v1554895678/Challenges/tvzmm442kkjocmihbpiq.jpg)
+Link solution: https://ping-coming-soon-page-master2.netlify.app/
+
+# Single price grid component solution
+
+![Single price grid component](https://res.cloudinary.com/dz209s6jk/image/upload/v1558450849/Challenges/etoajz7nokwmphl1jonw.jpg)
+Link solution: https://single-price-grid-component-master2.netlify.app/
   
-  
- <details>
+
+<details>
   <summary>Proyects of Frontend Mentor Junior</summary>
