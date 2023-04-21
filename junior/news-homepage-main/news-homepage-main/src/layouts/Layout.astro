@@ -1,0 +1,51 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+	:root {
+		/* ## Colors */
+
+		/* ### Primary */
+
+		--cl-Soft-orange: hsl(35, 77%, 62%);
+		--cl-Soft-red: hsl(5, 85%, 63%);
+
+		/* ### Neutral */
+
+		--cl-Off-white: hsl(36, 100%, 99%);
+		--cl-Grayish-blue: hsl(233, 8%, 79%);
+		--cl-Dark-grayish-blue: hsl(236, 13%, 42%);
+		--cl-Very-dark-blue: hsl(240, 100%, 5%);
+
+		/* ## Typography */
+
+		--Font-size: 15px;
+
+		/* ### Font */
+	}
+	body {
+		margin: 0%;
+		font-family: "Inter", sans-serif;
+		font-size: var(--Font-size);
+	}
+</style>
