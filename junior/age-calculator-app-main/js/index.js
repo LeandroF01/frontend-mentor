@@ -115,6 +115,18 @@ form.addEventListener("submit", (event) => {
 		errorDay.classList.remove("error");
 	}
 
+	let num = 0;
+
+	const timeoutNum = (limit, view) => {
+		let intervalId = setInterval(() => {
+			num++;
+			view.textContent = num;
+
+			if (num >= limit) {
+				clearInterval(intervalId);
+			}
+		}, 100);
+	};
 	// si se cumplieron las condiciones --> retorna
 	if (
 		errorDay.classList.length < 2 &&
@@ -122,11 +134,10 @@ form.addEventListener("submit", (event) => {
 		errorYear.classList.length < 2
 	) {
 		const date = ageCalculator(year, month, day);
+		console.log(timeoutNum(date.years));
 
-		yearsView.textContent = date.years;
-
-		monthsView.textContent = date.months;
-
-		daysView.textContent = date.days;
+		timeoutNum(date.years, yearsView);
+		timeoutNum(date.months, monthsView);
+		timeoutNum(date.days, daysView);
 	}
 });
