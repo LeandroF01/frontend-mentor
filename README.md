@@ -1,6 +1,6 @@
 # Frontend Mentor
 
-# 3-column preview card component solution
+# Frontend Mentor - 3-column preview card component solution
 
 ![3-column preview card](https://res.cloudinary.com/dz209s6jk/image/upload/v1617293350/Challenges/ofrkupd8a9wh1wenvr8c.jpg)
 Link solution: https://3-column-preview-card-component-main2.netlify.app/
