@@ -19,6 +19,17 @@
 	/* ## Typography */
 
 	--Font-size: 32px;
+
+	--shadow-color: 0deg 0% 53%;
+	--shadow-elevation-low:
+	  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+	  0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+	  1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+	--shadow-elevation-medium:
+	  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+	  0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+	  2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+	  5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
 body {
@@ -57,6 +68,7 @@ h2 {
 	height: 30em;
 	background: var(--cl-White);
 	border-radius: 1em 1em 10em 1em;
+	box-shadow: var(--shadow-elevation-medium);
 }
 .calculator__form {
 	display: flex;
@@ -133,6 +145,7 @@ h2 {
 	font-size: 0.7em;
 	letter-spacing: 0.2em;
 	margin-bottom: 0.4em;
+	color: var(--cl-Smokey-grey);
 }
 
 
