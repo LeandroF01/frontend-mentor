@@ -1,9 +1,14 @@
 ---
+import Content from "../components/Content.astro";
+import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main></main>
+	<Navbar />
+	<main>
+		<Content />
+	</main>
 </Layout>
 
 <style></style>
