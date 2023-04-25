@@ -7,7 +7,7 @@ import laptops from "../public/assets/images/image-top-laptops.jpg";
 
 <article class="content">
 	<article class="content__major">
-		<img src={major} alt="logo" />
+		<img class="major__desktop" src={major} alt="desktop" />
 		<h2 class="major__title">The Bright Future of Web 3.0?</h2>
 		<section class="major__info">
 			<p class="info__text">
@@ -21,19 +21,21 @@ import laptops from "../public/assets/images/image-top-laptops.jpg";
 	<article class="content__new">
 		<h3 class="new__title">New</h3>
 		<article class="new__article">
-			<h4 class="article__title">Hydrogen VS Electric Cars</h4>
+			<h4 class="article__title"><a href="#">Hydrogen VS Electric Cars</a></h4>
 			<p class="article__parraf">
 				Will hydrogen-fueled cars ever catch up to EVs?
 			</p>
 		</article>
 		<article class="new__article">
-			<h4 class="article__title">The Downsides of AI Artistry</h4>
+			<h4 class="article__title">
+				<a href="#">The Downsides of AI Artistry</a>
+			</h4>
 			<p class="article__parraf">
 				What are the possible adverse effects of on-demand AI image generation?
 			</p>
 		</article>
 		<article class="new__article">
-			<h4 class="article__title">Is VC Funding Drying Up?</h4>
+			<h4 class="article__title"><a href="#">Is VC Funding Drying Up?</a></h4>
 			<p class="article__parraf">
 				Private funding by VC firms is down 50% YOY. We take a look at what that
 				means.
@@ -71,3 +73,145 @@ import laptops from "../public/assets/images/image-top-laptops.jpg";
 		</article>
 	</article>
 </article>
+
+<style>
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		height: 100%;
+		gap: 2em;
+		margin: 3em;
+	}
+	.content__major {
+		display: grid;
+		grid-template-areas:
+			"a a"
+			"b c";
+		width: 50em;
+		height: auto;
+		gap: 1em;
+	}
+	.major__desktop {
+		grid-area: a;
+		width: 100%;
+	}
+	.major__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 6em;
+		grid-area: b;
+		font-size: 3em;
+		font-weight: 800;
+		color: var(--cl-Very-dark-blue);
+	}
+	.major__info {
+		display: flex;
+		justify-content: start;
+		flex-direction: column;
+		grid-area: c;
+		width: 23em;
+		gap: 2em;
+	}
+	.info__text {
+		font-size: 1em;
+		color: var(--cl-Dark-grayish-blue);
+	}
+	.info__button {
+		width: 15em;
+		height: 3em;
+		background: var(--cl-Soft-red);
+		color: var(--cl-Off-white);
+		font-size: 0.8em;
+		font-weight: 700;
+		letter-spacing: 0.25em;
+	}
+	.content__new {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		width: 24em;
+		background: var(--cl-Very-dark-blue);
+		color: var(--cl-Grayish-blue);
+	}
+	.new__title {
+		font-size: 2.5em;
+		color: var(--cl-Soft-orange);
+		margin: 0.5em 0.7em;
+	}
+	.new__article {
+		margin: 1em 2em;
+		height: 7em;
+		border-bottom: 1px solid var(--cl-Dark-grayish-blue);
+	}
+	.new__article:nth-child(4) {
+		border-bottom: none;
+	}
+	.article__title {
+		margin-bottom: 1em;
+		font-size: 1.1em;
+		font-weight: 700;
+		color: var(--cl-Off-white);
+	}
+	.article__parraf {
+		font-size: 0.9em;
+		font-weight: 400;
+	}
+
+	.content__popular {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 1.5em;
+	}
+	.popular__article {
+		display: flex;
+		width: 24em;
+		height: 10em;
+		gap: 1em;
+	}
+	.article__img {
+		width: 8em;
+	}
+	.article__info {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.info__num {
+		font-size: 2em;
+		font-weight: 800;
+		color: var(--cl-Grayish-blue);
+	}
+	.info__title {
+		font-size: 1.1em;
+		color: var(--cl-Very-dark-blue);
+	}
+	.info__text {
+		font-size: 0.8em;
+	}
+
+	@media (max-width: 1230px) {
+		.content__popular {
+			width: 24em;
+		}
+	}
+
+	@media (max-width: 750px) {
+		.content__major {
+			width: 24em;
+			grid-template-areas:
+				"a a"
+				"b b"
+				"c c";
+		}
+		.major__desktop {
+			object-fit: cover;
+		}
+	}
+</style>
