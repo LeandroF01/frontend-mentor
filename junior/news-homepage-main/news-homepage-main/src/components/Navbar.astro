@@ -1,10 +1,14 @@
 ---
 import logo from "../public/assets/images/logo.svg";
+import menu from "../public/assets/images/icon-menu.svg";
 ---
 
 <header class="container__navbar">
 	<nav class="navbar">
 		<img class="navbar__icon" src={logo} alt="icon" />
+		<button class="navbar__icon-menu">
+			<img class="icon-menu" src={menu} alt="icon-menu" />
+		</button>
 		<ul class="navbar__list">
 			<li class="list"><a href="#">Home</a></li>
 			<li class="list"><a href="#">New</a></li>
@@ -15,4 +19,92 @@ import logo from "../public/assets/images/logo.svg";
 	</nav>
 </header>
 
-<style></style>
+<style>
+	.container__navbar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	.navbar__icon-menu {
+		display: none;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 4em;
+		margin: 0 10em;
+	}
+	.navbar__icon {
+		width: 5em;
+		height: 3em;
+		aspect-ratio: 1;
+	}
+	.navbar__list,
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		font-size: 1em;
+		color: var(--cl-Dark-grayish-blue);
+		cursor: pointer;
+	}
+
+	@media (max-width: 1000px) {
+		.navbar {
+			margin: 0 1em;
+			position: relative;
+		}
+		.navbar__icon-menu {
+			display: block;
+			position: absolute;
+			top: 2em;
+			right: 0;
+			z-index: 10;
+		}
+		.navbar__list {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			background: var(--cl-Off-white);
+			width: 17em;
+			height: 100%;
+			margin: 0;
+			top: 0;
+			right: -17em;
+			z-index: 1;
+			transition: 2s all;
+		}
+		a {
+			color: var(--cl-Very-dark-blue);
+		}
+		.active {
+			right: 0em;
+		}
+	}
+</style>
+<script>
+	const menuNavbar = document.querySelector(".navbar__icon-menu");
+	const navbar = document.querySelector(".navbar__list");
+	const icon = document.querySelector(".icon-menu");
+
+	menuNavbar.addEventListener("click", (event) => {
+		event.preventDefault();
+
+		if (navbar.classList.value.includes("active")) {
+			return (
+				navbar.classList.remove("active"),
+				(icon.src = "../public/assets/images/icon-menu.svg")
+			);
+		} else {
+			return (
+				navbar.classList.add("active"),
+				(icon.src = "../public/assets/images/icon-menu-close.svg")
+			);
+		}
+	});
+</script>
