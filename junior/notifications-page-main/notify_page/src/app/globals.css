@@ -39,3 +39,7 @@ button{
     border: none;
     cursor: pointer;
 }
+
+h2, h5, p {
+    margin: 0%;
+}
