@@ -6,6 +6,8 @@ import mark from "../../public/assets/images/avatar-mark-webber.webp";
 import nathan from "../../public/assets/images/avatar-nathan-peterson.webp";
 import rizky from "../../public/assets/images/avatar-rizky-hasanuddin.webp";
 
+import chess from "../../public/assets/images/image-chess.webp";
+
 const obj = [
 	{
 		id: 1,
@@ -50,7 +52,7 @@ const obj = [
 		type: "commented on your picture",
 		time: "1 week ago",
 		status: "read",
-		image: "./",
+		image: chess,
 	},
 	{
 		id: 6,
