@@ -1,20 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Notify } from "./Notify";
 import obj from "../ts/db";
 
 export const Modal = () => {
-	const updatedObj = [...obj];
-	const totalNotify = updatedObj.filter((num) => num.status === "unread");
+	const [updatedObj, setUpdatedObj] = useState([...obj]);
+	const [total, setTotal] = useState();
+
+	const totalNotify = updatedObj.filter((num) => {
+		return num.status === "unread";
+	});
 
 	const handleRead = () => {
 		const updatedData = updatedObj.map((item) => {
-			console.log(item.status);
 			if (item.status === "unread") {
 				return { ...item, status: "read" };
 			}
 			return item;
 		});
+		setUpdatedObj(updatedData);
+	};
+	const handleClick = (id) => {
+		const updatedData = updatedObj.map((item) => {
+			if (item.id === id && item.status === "unread") {
+				return { ...item, status: "read" };
+			}
+			return item;
+		});
+		setUpdatedObj(updatedData);
 	};
 
 	return (
@@ -22,14 +35,16 @@ export const Modal = () => {
 			<section className="modal__main">
 				<h2 className="modal__title">
 					Notifications
-					<span className="modal__num">{totalNotify.length}</span>
+					{totalNotify.length > 0 ? (
+						<span className="modal__num">{totalNotify.length}</span>
+					) : null}
 				</h2>
-				<button className="modal__read" onClick={handleRead}>
+				<button className="modal__read" onClick={() => handleRead(null)}>
 					Mark all as read
 				</button>
 			</section>
 			{updatedObj.map((notify) => (
-				<Notify notify={notify} key={notify.id} />
+				<Notify notify={notify} key={notify.id} handleClick={handleClick} />
 			))}
 		</article>
 	);
