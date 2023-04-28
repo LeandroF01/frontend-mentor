@@ -9,6 +9,8 @@
     border-radius: .5em;
     color: var(--cl-Dark-grayish-blue);
     gap: 1em;
+    cursor: pointer;
+    position: relative;
 }
 .read{
     background: var(--cl-Light-grayish-blue-1);
@@ -37,6 +39,7 @@
 
 }
 .description__time {
+    font-size: 1em;
 }
 .description__message {
     border: 1px solid var(--cl-Grayish-blue);
@@ -55,4 +58,20 @@
     border-radius: 100%;
     background: var(--cl-Red);
 
+}
+.active__post{
+    font-weight: 800;
+
+}
+.active__group{
+    font-weight: 800;
+    color: var(--cl-Blue);
+
+
+}
+.description__img{
+    position: absolute;
+    right: 0;
+    width: 3em;
+    height: 3em;
 }
