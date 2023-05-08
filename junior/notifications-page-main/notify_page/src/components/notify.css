@@ -1,7 +1,7 @@
 
 .notify {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 40em;
     padding: 1em;
@@ -28,7 +28,7 @@
 
 .notify__description {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     position: relative;
     gap: .5em;
     font-weight: 500; 

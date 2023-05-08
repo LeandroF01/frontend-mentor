@@ -20,7 +20,7 @@ export const Modal = () => {
 		});
 		setUpdatedObj(updatedData);
 	};
-	const handleClick = (id) => {
+	const handleClick = (id: number) => {
 		const updatedData = updatedObj.map((item) => {
 			if (item.id === id && item.status === "unread") {
 				return { ...item, status: "read" };
@@ -39,7 +39,7 @@ export const Modal = () => {
 						<span className="modal__num">{totalNotify.length}</span>
 					) : null}
 				</h2>
-				<button className="modal__read" onClick={() => handleRead(null)}>
+				<button className="modal__read" onClick={() => handleRead()}>
 					Mark all as read
 				</button>
 			</section>

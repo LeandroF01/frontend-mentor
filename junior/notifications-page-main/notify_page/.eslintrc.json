@@ -5,11 +5,11 @@
 	},
 	"extends": [
 		"eslint:recommended",
-		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
-		"some-other-config-you-use",
+		"plugin:react/recommended",
 		"prettier"
 	],
+	"rules": {},
 	"overrides": [],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -17,5 +17,9 @@
 		"sourceType": "module"
 	},
 	"plugins": ["react", "@typescript-eslint"],
-	"rules": {}
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
 }

@@ -2,7 +2,27 @@
 import React from "react";
 import Image from "next/image";
 import "./notify.css";
-export const Notify = ({ notify, handleClick }) => {
+
+type NotifyData = {
+	id: number;
+	name: string;
+	avatar: any;
+	type: string;
+	post?: string;
+	time: string;
+	status: string; // permitimos cualquier cadena de texto
+	group?: string;
+	message?: string;
+	image?: any;
+};
+
+export const Notify = ({
+	notify,
+	handleClick,
+}: {
+	notify: NotifyData;
+	handleClick: Function;
+}) => {
 	const status = notify.status === "unread";
 
 	return (
